@@ -29,7 +29,6 @@ class ComingSoonFragment : Fragment(R.layout.fragment_coming_soon), IComingSoonC
         if (mainViewModel.checkRegister()) {
             val intent = Intent(Intent.ACTION_SEND)
             intent.putExtra(Intent.EXTRA_TEXT, comingSoonViewModel.getImages()[position].linkImage)
-            println(comingSoonViewModel.getImages()[position].linkImage)
             intent.type = "text/plain"
             startActivity(intent)
         } else {
