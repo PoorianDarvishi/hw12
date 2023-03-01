@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/doseFragment"
+        android:icon="@drawable/baseline_grid_on_24"
+        android:title="Dose" />
+    <item
+        android:id="@+id/fourInRowFragment"
+        android:icon="@drawable/round_looks_4_24"
+        android:title="4InRow" />
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/round_settings_24"
+        android:title="setting" />
+</menu>
