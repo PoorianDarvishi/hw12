@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.comingsoon
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix.image.ImageComingSoon
+import com.example.netflix.R
 
 class AdapterComingSoon(
     private val item: MutableList<ImageComingSoon>,

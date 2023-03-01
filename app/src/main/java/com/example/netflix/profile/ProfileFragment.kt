@@ -1,9 +1,11 @@
-package com.example.netflix
+package com.example.netflix.profile
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.example.netflix.main.MainViewModel
+import com.example.netflix.R
 import com.example.netflix.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {

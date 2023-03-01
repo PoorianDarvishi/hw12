@@ -1,6 +1,7 @@
-package com.example.netflix
+package com.example.netflix.image
 
 import androidx.lifecycle.ViewModel
+import com.example.netflix.R
 
 class ImagesViewModel : ViewModel() {
     private val imageList = mutableListOf(

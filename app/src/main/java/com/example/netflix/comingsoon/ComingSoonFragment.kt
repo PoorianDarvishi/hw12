@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.comingsoon
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix.main.MainViewModel
+import com.example.netflix.R
 import com.example.netflix.databinding.FragmentComingSoonBinding
 
 class ComingSoonFragment : Fragment(R.layout.fragment_coming_soon), IComingSoonClick {

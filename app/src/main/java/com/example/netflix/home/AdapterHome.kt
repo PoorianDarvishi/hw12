@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,9 +7,14 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix.image.Image
+import com.example.netflix.R
 
-class AdapterFavorite(private val item: MutableList<Image>) :
-    RecyclerView.Adapter<AdapterFavorite.ViewHolder>() {
+class AdapterHome(
+    private val item: MutableList<Image>,
+    private val clickListener: IHomeClick
+) :
+    RecyclerView.Adapter<AdapterHome.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val itemText: TextView = itemView.findViewById(R.id.tv_home)
         val itemHome: AppCompatImageView = itemView.findViewById(R.id.iv_home)
@@ -25,9 +30,19 @@ class AdapterFavorite(private val item: MutableList<Image>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.apply {
+            if (item[position].isLike) {
+                itemLike.setImageResource(R.drawable.round_favorite_24)
+            }
             itemText.text = item[position].nameImage
             itemHome.setImageResource(item[position].imageSRC)
-            itemLike.setImageResource(R.drawable.round_favorite_24)
+            itemLike.setOnClickListener {
+                clickListener.onClick(position)
+                if (item[position].isLike) {
+                    itemLike.setImageResource(R.drawable.round_favorite_24)
+                } else {
+                    itemLike.setImageResource(R.drawable.round_favorite_border_24)
+                }
+            }
         }
     }
 
@@ -36,5 +51,3 @@ class AdapterFavorite(private val item: MutableList<Image>) :
         return item.size
     }
 }
-
-

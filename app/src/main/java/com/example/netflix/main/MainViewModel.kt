@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.main
 
 import android.net.Uri
 import androidx.lifecycle.LiveData

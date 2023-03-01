@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -7,7 +7,12 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.netflix.R
+import com.example.netflix.comingsoon.ComingSoonFragment
 import com.example.netflix.databinding.ActivityMainBinding
+import com.example.netflix.home.HomeFragment
+import com.example.netflix.like.LikeFragment
+import com.example.netflix.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

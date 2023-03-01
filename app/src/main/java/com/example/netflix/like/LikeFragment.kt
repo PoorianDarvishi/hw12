@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.like
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix.image.ImagesViewModel
+import com.example.netflix.R
 import com.example.netflix.databinding.FragmentLikeBinding
 
 

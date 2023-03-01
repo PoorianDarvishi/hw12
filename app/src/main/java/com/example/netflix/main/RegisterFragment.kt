@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.main
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -11,7 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import com.example.netflix.R
 import com.example.netflix.databinding.FragmentRegisterBinding
+import com.example.netflix.profile.ProfileFragment
 
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
@@ -24,7 +26,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             val activityForResult =
                 registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                     if (result.resultCode == RESULT_OK) {
-                        val selectedImageUri: Uri? = result.data!!.data
+                        val selectedImageUri: Uri? = result.data?.data
                         if (selectedImageUri != null) {
                             mainViewModel.setProfile(selectedImageUri)
                             binding.imageProfile.setImageURI(selectedImageUri)
@@ -53,10 +55,10 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             }
 
             imageProfile.setOnClickListener {
-                val i = Intent()
-                i.type = "image/*"
-                i.action = Intent.ACTION_GET_CONTENT
-                activityForResult.launch(i)
+                val intent = Intent()
+                intent.type = "image/*"
+                intent.action = Intent.ACTION_GET_CONTENT
+                activityForResult.launch(intent)
             }
 
         }

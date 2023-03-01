@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.netflix.HomeFragment"
+        android:name="com.example.netflix.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/likeFragment"
-        android:name="com.example.netflix.LikeFragment"
+        android:name="com.example.netflix.like.LikeFragment"
         android:label="fragment_like"
         tools:layout="@layout/fragment_like" />
     <fragment
         android:id="@+id/comingSoonFragment"
-        android:name="com.example.netflix.ComingSoonFragment"
+        android:name="com.example.netflix.comingsoon.ComingSoonFragment"
         android:label="fragment_coming_soon"
         tools:layout="@layout/fragment_coming_soon" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.netflix.ProfileFragment"
+        android:name="com.example.netflix.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.netflix.RegisterFragment"
+        android:name="com.example.netflix.main.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
 </navigation>
