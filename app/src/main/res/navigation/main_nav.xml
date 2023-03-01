@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/quizPageFragment">
+
+    <fragment
+        android:id="@+id/quizPageFragment"
+        android:name="com.example.questionnav.QuizPageFragment"
+        android:label="fragment_quiz_page"
+        tools:layout="@layout/fragment_quiz_page" >
+        <action
+            android:id="@+id/action_quizPageFragment_to_cheatPageFragment"
+            app:destination="@id/cheatPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatPageFragment"
+        android:name="com.example.questionnav.CheatPageFragment"
+        android:label="fragment_cheat_page"
+        tools:layout="@layout/fragment_cheat_page" >
+        <action
+            android:id="@+id/action_cheatPageFragment_to_quizPageFragment"
+            app:destination="@id/quizPageFragment" />
+        <argument
+            android:name="answer"
+            app:argType="string" />
+    </fragment>
+</navigation>
